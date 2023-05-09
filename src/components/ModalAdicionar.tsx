@@ -4,7 +4,7 @@ interface propsModalAdicionar {
     name?: string,
     data: string,
     fecharModal: (fechar: boolean) => any,
-    buscarAtividade: (buscar:boolean) => any
+    buscarAtividade: () => any
 }
 export default function Modal(props: propsModalAdicionar) {
     const { fecharModal, data, buscarAtividade } = props;
