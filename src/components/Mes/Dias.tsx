@@ -25,7 +25,7 @@ export default function Dias(props: PropsDias) {
     async function deletarAtividade(id: number) {
         const axios = require("axios")
         try {
-            const res = await axios.post("http://localhost:8000/Rotinas/delete",
+            const res = await axios.post(process.env.URL_API+"/Rotinas/delete",
                 {
                     id: id
                 },
@@ -45,7 +45,7 @@ export default function Dias(props: PropsDias) {
     async function postarAtividadeFeita(id: number, check: boolean) {
         const axios = require("axios")
         try {
-            const res = await axios.post("http://localhost:8000/Rotinas/update",
+            const res = await axios.post(process.env.URL_API+"/Rotinas/update",
                 {
                     id: id,
                     feito: check

@@ -15,7 +15,7 @@ export default function Modal(props: propsModalAdicionar) {
 
         const axios = require("axios")
         try {
-            const res = await axios.post("http://localhost:8000/Rotinas/post",
+            const res = await axios.post(process.env.URL_API+"/Rotinas/post",
                 {
                     name: nome,
                     description: descricao,
