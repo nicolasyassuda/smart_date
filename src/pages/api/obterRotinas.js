@@ -1,7 +1,7 @@
 export default async function obterRotinas(req, res) {
   console.log("AAAAAAAAAAAAAAAA")
   const RotinasDoMes = await fetch(
-    process.env.URL_API+"/Rotinas/get/" + req.body.ano + "/" + req.body.mes,
+    "http://localhost:8000"+"/Rotinas/get/" + req.body.ano + "/" + req.body.mes,
     {
       method: "GET",
       headers: {

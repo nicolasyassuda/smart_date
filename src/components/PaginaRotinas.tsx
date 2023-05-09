@@ -49,7 +49,7 @@ export default function PaginaRotinas(props: PaginaRotinasProps) {
     async function obterRotinas(ano: number, mes: number) {
 
         try {
-            const res = await axios.get(process.env.URL_API + "/Rotinas/get /" + ano + " / " + mes, {
+            const res = await axios.get("http://localhost:8000" + "/Rotinas/get /" + ano + " / " + mes, {
                 headers: {
                 "Content-Type": "application/json"
             }
